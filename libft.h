@@ -15,6 +15,8 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <sys/types.h>
+# include <sys/uio.h>
 
 typedef struct		s_list
 {
@@ -81,5 +83,6 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 void				ft_cswap(char *c1, char *c2);
 int					ft_printf(const char *format, ...);
+int					get_next_line(int fd, char **line);
 
 #endif
