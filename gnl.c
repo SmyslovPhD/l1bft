@@ -6,7 +6,7 @@
 /*   By: kbraum <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 20:48:10 by kbraum            #+#    #+#             */
-/*   Updated: 2020/12/16 17:22:29 by kbraum           ###   ########.fr       */
+/*   Updated: 2021/03/11 20:36:48 by kbraum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int			get_next_line(int fd, char **line)
 	int					n;
 
 	if (BUFFER_SIZE < 0 || line == 0 ||
-			(buf = find_buf(fd, &list_buf)) == 0||
+			(buf = find_buf(fd, &list_buf)) == 0 ||
 			(n = read(fd, buf, 0)) < 0)
 		return (-1);
 	*line = ft_strjoin("", "");
