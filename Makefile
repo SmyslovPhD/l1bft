@@ -34,7 +34,6 @@ SRCS 		= ft_memset.c \
 			  ft_putchar_fd.c \
 			  ft_putstr_fd.c \
 			  ft_putendl_fd.c \
-			  ft_putfmt_fd.c \
 			  ft_putnbr_fd.c \
 			  ft_pow.c \
 			  ft_lstnew.c \
@@ -48,7 +47,6 @@ SRCS 		= ft_memset.c \
 			  ft_lstmap.c \
 			  ft_swap.c \
 			  ft_abs.c \
-			  ft_printf.c \
 			  gnl.c
 
 OBJS		= ${SRCS:.c=.o} 
