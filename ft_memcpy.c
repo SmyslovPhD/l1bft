@@ -6,7 +6,7 @@
 /*   By: kbraum <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 19:52:55 by kbraum            #+#    #+#             */
-/*   Updated: 2020/11/04 22:28:00 by kbraum           ###   ########.fr       */
+/*   Updated: 2021/06/29 15:47:21 by kbraum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 
 	i = 0;
 	if (dst || src || !n)
+	{
 		while (i < n)
 		{
-			((char*)dst)[i] = ((char*)src)[i];
+			((char *)dst)[i] = ((char *)src)[i];
 			i++;
 		}
+	}
 	return (dst);
 }

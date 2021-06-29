@@ -6,7 +6,7 @@
 /*   By: kbraum <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 21:45:47 by kbraum            #+#    #+#             */
-/*   Updated: 2020/11/06 22:09:43 by kbraum           ###   ########.fr       */
+/*   Updated: 2021/06/29 15:58:21 by kbraum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (n == 0)

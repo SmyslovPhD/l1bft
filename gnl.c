@@ -6,7 +6,7 @@
 /*   By: kbraum <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 20:48:10 by kbraum            #+#    #+#             */
-/*   Updated: 2021/03/11 20:36:48 by kbraum           ###   ########.fr       */
+/*   Updated: 2021/06/29 16:10:03 by kbraum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,8 @@ static char	*check_next_line(char *buf, char **line)
 	if (*buf)
 	{
 		line_tmp = *line;
-		if ((buf_p = ft_strchr(buf, '\n')))
+		buf_p = ft_strchr(buf, '\n');
+		if (buf_p)
 		{
 			*buf_p = '\0';
 			*line = ft_strjoin(*line, buf);
@@ -78,25 +79,26 @@ static char	*check_next_line(char *buf, char **line)
 	return (buf_p);
 }
 
-int			get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	static t_list_buf	*list_buf = 0;
 	char				*buf;
 	char				*buf_p;
 	int					n;
 
-	if (BUFFER_SIZE < 0 || line == 0 ||
-			(buf = find_buf(fd, &list_buf)) == 0 ||
-			(n = read(fd, buf, 0)) < 0)
+	if (BUFFER_SIZE < 0 || line == 0 || read(fd, buf, 0) < 0)
 		return (-1);
+	buf = find_buf(fd, &list_buf);
 	*line = ft_strjoin("", "");
 	buf_p = check_next_line(buf, line);
-	while (buf_p == 0 && (n = read(fd, buf, BUFFER_SIZE)))
+	n = read(fd, buf, BUFFER_SIZE);
+	while (buf_p == 0 && n)
 	{
 		buf[n] = '\0';
 		buf_p = check_next_line(buf, line);
 		if (*line == 0)
 			return (-1);
+		n = read(fd, buf, BUFFER_SIZE);
 	}
 	if (buf_p == 0 && n == 0)
 	{

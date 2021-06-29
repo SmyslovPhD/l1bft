@@ -6,7 +6,7 @@
 /*   By: kbraum <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 20:58:03 by kbraum            #+#    #+#             */
-/*   Updated: 2020/11/04 22:34:04 by kbraum           ###   ########.fr       */
+/*   Updated: 2021/06/29 15:49:14 by kbraum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,16 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (dst || src || !len)
 	{
 		if (dst < src)
+		{
 			while (i < len)
 			{
-				((char*)dst)[i] = ((char*)src)[i];
+				((char *)dst)[i] = ((char *)src)[i];
 				i++;
 			}
+		}
 		else
 			while (len--)
-				((char*)dst)[len] = ((char*)src)[len];
+				((char *)dst)[len] = ((char *)src)[len];
 	}
 	return (dst);
 }

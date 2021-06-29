@@ -6,7 +6,7 @@
 /*   By: kbraum <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/08 14:09:46 by kbraum            #+#    #+#             */
-/*   Updated: 2020/11/24 18:23:23 by kbraum           ###   ########.fr       */
+/*   Updated: 2021/06/29 15:56:52 by kbraum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static size_t	ft_split_len(char const *s, char c)
 	return (i);
 }
 
-static char		**ft_split_free(char **sp)
+static char	**ft_split_free(char **sp)
 {
 	size_t	i;
 
@@ -52,7 +52,7 @@ static char		**ft_split_free(char **sp)
 	return (0);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	words;
@@ -61,7 +61,7 @@ char			**ft_split(char const *s, char c)
 	if (s == 0)
 		return (0);
 	words = ft_split_count(s, c);
-	sp = (char**)malloc((words + 1) * sizeof(char*));
+	sp = (char **)malloc((words + 1) * sizeof(char *));
 	if (sp == 0)
 		return (0);
 	i = 0;
@@ -69,7 +69,7 @@ char			**ft_split(char const *s, char c)
 	{
 		while (*s == c)
 			s++;
-		sp[i] = (char*)malloc(ft_split_len(s, c) + 1);
+		sp[i] = (char *)malloc(ft_split_len(s, c) + 1);
 		if (sp[i] == 0)
 			return (ft_split_free(sp));
 		ft_strlcpy(sp[i++], s, ft_split_len(s, c) + 1);

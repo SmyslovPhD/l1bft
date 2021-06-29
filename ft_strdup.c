@@ -6,7 +6,7 @@
 /*   By: kbraum <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 17:56:55 by kbraum            #+#    #+#             */
-/*   Updated: 2020/11/07 18:06:47 by kbraum           ###   ########.fr       */
+/*   Updated: 2021/06/29 15:57:26 by kbraum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 
 	if (s1 == 0)
 		return (0);
-	s2 = (char*)malloc(ft_strlen(s1) + 1);
+	s2 = (char *)malloc(ft_strlen(s1) + 1);
 	if (s2)
 	{
 		i = 0;

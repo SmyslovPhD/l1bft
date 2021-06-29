@@ -6,7 +6,7 @@
 /*   By: kbraum <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 19:51:31 by kbraum            #+#    #+#             */
-/*   Updated: 2020/11/09 17:25:32 by kbraum           ###   ########.fr       */
+/*   Updated: 2021/06/29 15:57:35 by kbraum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (s1 == 0 || s2 == 0)
 		return (0);
 	len = ft_strlen(s1) + ft_strlen(s2) + 1;
-	j = (char*)malloc(len);
+	j = (char *)malloc(len);
 	if (j)
 	{
 		ft_strlcpy(j, s1, ft_strlen(s1) + 1);

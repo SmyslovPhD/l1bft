@@ -6,13 +6,13 @@
 /*   By: kbraum <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/18 20:24:26 by kbraum            #+#    #+#             */
-/*   Updated: 2020/12/18 20:27:03 by kbraum           ###   ########.fr       */
+/*   Updated: 2021/06/29 15:54:46 by kbraum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_putendl_fd(char *s, int fd)
+int	ft_putendl_fd(char *s, int fd)
 {
 	int		i;
 

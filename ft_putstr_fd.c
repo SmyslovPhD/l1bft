@@ -6,13 +6,13 @@
 /*   By: kbraum <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 20:21:46 by kbraum            #+#    #+#             */
-/*   Updated: 2020/12/18 20:27:57 by kbraum           ###   ########.fr       */
+/*   Updated: 2021/06/29 15:55:25 by kbraum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_putstr_fd(char *s, int fd)
+int	ft_putstr_fd(char *s, int fd)
 {
 	if (s)
 		return (write(fd, s, ft_strlen(s)));

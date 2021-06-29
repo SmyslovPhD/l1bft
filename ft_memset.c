@@ -6,7 +6,7 @@
 /*   By: kbraum <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 17:39:16 by kbraum            #+#    #+#             */
-/*   Updated: 2020/11/04 19:37:25 by kbraum           ###   ########.fr       */
+/*   Updated: 2021/06/29 15:49:38 by kbraum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	i = 0;
 	while (i < len)
-		((char*)b)[i++] = (unsigned char)c;
+		((char *)b)[i++] = (char)c;
 	return (b);
 }

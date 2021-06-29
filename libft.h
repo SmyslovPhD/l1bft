@@ -6,7 +6,7 @@
 /*   By: kbraum <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 16:15:20 by kbraum            #+#    #+#             */
-/*   Updated: 2021/03/11 20:53:27 by kbraum           ###   ########.fr       */
+/*   Updated: 2021/06/29 16:11:47 by kbraum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
